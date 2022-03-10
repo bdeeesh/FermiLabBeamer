@@ -15,17 +15,50 @@
 \setbeamercolor{item}{fg=75Grey}
 
 
+
+
+
 \setbeamertemplate{frametitle}
 {
-    \begin{beamercolorbox}[ht=5pt,rightskip=.3cm]{frametitle}
-        \insertframetitle
-    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=1.2cm,rightskip=.3cm]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \vskip-0.8ex%
+        \color{UBCgrey2}\rule{1.05\linewidth}{1.5pt}
+    \end{beamercolorbox}%
 
 }
 
 
 \setbeamertemplate{title page}[default][left]
 
+
+\setbeamertemplate{title page}
+{\vbox{}
+    \begin{beamercolorbox}[sep=8pt,left]{title}
+    \includegraphics[width=5cm]{FNAL-Logo-NAL-Blue.png}
+    {\color{UBCgrey2}\rule{1\linewidth}{1.5pt}}
+      \tiny Managed by Fermi Research Alliance, LLC for the U.S Department of Energy Office of Science
+      
+      
+      {\color{UBCgrey2}\rule{1\linewidth}{1.5pt}}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,left]{author}
+    \usebeamerfont{title}\inserttitle
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,left]{author}
+     \usebeamerfont{author}\insertauthor \\
+     \vspace{0.25cm}
+     \usebeamerfont{author}\insertinstitute \\
+     \vspace{0.25cm}
+     \insertdate
+    \end{beamercolorbox}
+    %\vskip-1em\par % change here
+}
+    
+
+
+    
 \setbeamercolor{palette secondary}{bg=MARBlue,fg=white}
 \setbeamercolor{palette tertiary}{bg=75Grey,fg=white}
 %\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
@@ -37,9 +70,9 @@
 
 \setbeamertemplate{footline}{
    %\dsglogo
-   \begin{beamercolorbox}[ht=5pt,leftskip=0.5cm,rightskip=.3cm]{}
+   \begin{beamercolorbox}[ht=5pt,leftskip=1cm,rightskip=.3cm]{}
     %\hrule
-    {\color{UBCgrey2}\rule{0.74\linewidth}{4pt}}
+    {\color{UBCgrey2}\rule{0.7\linewidth}{4pt}}
     \hfill
     \raisebox{-0.8mm}{\includegraphics[width=2cm]{FNAL-Logo-NAL-Blue.png}}
     \newline
